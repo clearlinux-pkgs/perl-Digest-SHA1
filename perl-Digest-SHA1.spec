@@ -4,13 +4,13 @@
 #
 Name     : perl-Digest-SHA1
 Version  : 2.13
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-2.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-2.13.tar.gz
-Summary  : Perl interface to the SHA-1 Algorithm
+Summary  : Perl interface to the SHA-1 algorithm
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-Digest-SHA1-lib = %{version}-%{release}
+Requires: perl-Digest-SHA1-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -22,25 +22,25 @@ input a message of arbitrary length and produces as output a 160-bit
 %package dev
 Summary: dev components for the perl-Digest-SHA1 package.
 Group: Development
-Requires: perl-Digest-SHA1-lib = %{version}-%{release}
 Provides: perl-Digest-SHA1-devel = %{version}-%{release}
-Requires: perl-Digest-SHA1 = %{version}-%{release}
 Requires: perl-Digest-SHA1 = %{version}-%{release}
 
 %description dev
 dev components for the perl-Digest-SHA1 package.
 
 
-%package lib
-Summary: lib components for the perl-Digest-SHA1 package.
-Group: Libraries
+%package perl
+Summary: perl components for the perl-Digest-SHA1 package.
+Group: Default
+Requires: perl-Digest-SHA1 = %{version}-%{release}
 
-%description lib
-lib components for the perl-Digest-SHA1 package.
+%description perl
+perl components for the perl-Digest-SHA1 package.
 
 
 %prep
 %setup -q -n Digest-SHA1-2.13
+cd %{_builddir}/Digest-SHA1-2.13
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -76,12 +76,12 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Digest/SHA1.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Digest::SHA1.3
 
-%files lib
+%files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Digest/SHA1/SHA1.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Digest/SHA1.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Digest/SHA1/SHA1.so
