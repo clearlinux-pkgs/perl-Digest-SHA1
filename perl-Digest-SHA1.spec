@@ -4,7 +4,7 @@
 #
 Name     : perl-Digest-SHA1
 Version  : 2.13
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-2.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-2.13.tar.gz
 Summary  : Perl interface to the SHA-1 algorithm
@@ -83,5 +83,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Digest/SHA1.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Digest/SHA1/SHA1.so
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Digest/SHA1.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/auto/Digest/SHA1/SHA1.so
