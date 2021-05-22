@@ -4,7 +4,7 @@
 #
 Name     : perl-Digest-SHA1
 Version  : 2.13
-Release  : 8
+Release  : 9
 URL      : https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-2.13.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/G/GA/GAAS/Digest-SHA1-2.13.tar.gz
 Summary  : Perl interface to the SHA-1 algorithm
